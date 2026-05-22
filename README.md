@@ -3,6 +3,8 @@ meta-ridgerun
 
 RidgeRun vendor layer for Yocto/OE, kept minimal and ready for project-specific recipes and bbappends.
 
+For a full RidgeRun Product List and links to their respective wikis and recipes in this layer. In case they are supported, see the following link: [RidgeRun Product List](https://developer.ridgerun.com/wiki/index.php/RidgeRun_Yocto_Developer_Guide/RidgeRun_Services_and_Development#RidgeRun_Product_List) 
+
 Compatibility
 -------------
 - Yocto release: scarthgap
