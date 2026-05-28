@@ -5,6 +5,7 @@ SECTION = "multimedia"
 LICENSE = "Proprietary"
 
 LIC_FILES_CHKSUM = "file://COPYING;md5=1887e8dfc90a84423fd31d1d45ee6718"
+COMPATIBLE_MACHINE = ".*"
 
 DEPENDS = "gstreamer1.0 gstreamer1.0-plugins-base cairo"
 

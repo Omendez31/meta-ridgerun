@@ -5,6 +5,7 @@ SECTION = "multimedia"
 LICENSE = "GPL-2.0-or-later"
 
 LIC_FILES_CHKSUM = "file://COPYING;md5=e1caa368743492879002ad032445fa97"
+COMPATIBLE_MACHINE = ".*"
 
 DEPENDS = " \
     gstreamer1.0 \

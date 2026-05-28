@@ -4,6 +4,7 @@ HOMEPAGE = "https://developer.ridgerun.com/wiki/index.php?title=GstRtspSink"
 SECTION = "multimedia"
 LICENSE = "Proprietary"
 LIC_FILES_CHKSUM = "file://COPYING;md5=1887e8dfc90a84423fd31d1d45ee6718"
+COMPATIBLE_MACHINE = ".*"
 
 DEPENDS = " \
     gstreamer1.0 \

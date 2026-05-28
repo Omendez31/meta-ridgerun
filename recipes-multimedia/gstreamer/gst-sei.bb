@@ -4,6 +4,7 @@ HOMEPAGE = "https://www.ridgerun.com/gstseimetadata"
 SECTION = "multimedia"
 LICENSE = "Proprietary"
 LIC_FILES_CHKSUM = "file://COPYING;md5=2207b8e5f4ab4b3a0c794e43f2002ea3"
+COMPATIBLE_MACHINE = ".*"
 
 
 DEPENDS = " \

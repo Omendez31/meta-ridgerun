@@ -4,6 +4,7 @@ HOMEPAGE = "https://developer.ridgerun.com/wiki/index.php?title=GstInterpipe"
 SECTION = "multimedia"
 LICENSE = "LGPL2.1"
 LIC_FILES_CHKSUM = "file://COPYING;md5=3191ae9476980e87e3494d2d8ebe4584"
+COMPATIBLE_MACHINE = ".*"
 
 # Base dependencies
 DEPENDS = " \

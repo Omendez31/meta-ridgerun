@@ -3,6 +3,7 @@ DESCRIPTION = "GStreamer element used to overlay QML files over video streams"
 SECTION = "multimedia"
 LICENSE = "Proprietary"
 LIC_FILES_CHKSUM = "file://COPYING;md5=2282fc857e14ce7b17c1c9d810504ac5"
+COMPATIBLE_MACHINE = ".*"
 
 DEPENDS = " \
     gstreamer1.0 \

@@ -4,6 +4,7 @@ HOMEPAGE = "https://www.ridgerun.com/gstisp"
 SECTION = "multimedia"
 LICENSE = "Proprietary"
 LIC_FILES_CHKSUM = "file://COPYING;md5=46819161aba98ab8c502e93a15713e58"
+COMPATIBLE_MACHINE = "(imx-nxp-bsp)"
 
 DEPENDS = " \
     gstreamer1.0 \
