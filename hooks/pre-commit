@@ -2,25 +2,10 @@
 
 set -euo pipefail
 
-HOOK_DIR="$(CDPATH= cd -- "$(dirname -- "$0")" && pwd)"
-HOOKS_D="${HOOK_DIR}/pre-commit.d"
-
-if [ ! -d "${HOOKS_D}" ]; then
-    exit 0
+if ! command -v pre-commit >/dev/null 2>&1; then
+    echo "ERROR: pre-commit is not installed."
+    echo "Install it with: pip install pre-commit"
+    exit 1
 fi
 
-status=0
-for hook in "${HOOKS_D}"/*.sh; do
-    [ -e "${hook}" ] || continue
-    if [ ! -x "${hook}" ]; then
-        echo "Skipping non-executable hook: ${hook}"
-        continue
-    fi
-    "${hook}" || status=$?
-done
-
-if [ "${status}" -ne 0 ]; then
-    exit "${status}"
-fi
-
-exit 0
+exec pre-commit run --hook-stage pre-commit

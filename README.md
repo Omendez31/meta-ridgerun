@@ -31,22 +31,21 @@ BBLAYERS += "${TOPDIR}/../meta-ridgerun"
 
 Git Hooks
 ---------
-This layer includes a pre-commit hook runner at `hooks/pre-commit`.
-Checks are implemented as executable scripts under `hooks/pre-commit.d/`.
-Current checks:
+This layer uses the `pre-commit` framework. Current checks:
 - `10-compatible-machine.sh`: verifies each staged `.bb` file defines `COMPATIBLE_MACHINE`.
 
-Enable layer hooks from the `meta-ridgerun` repository root:
+Install `pre-commit` and enable hooks from the `meta-ridgerun` repository root:
+```
+pip install pre-commit
+pre-commit install --hook-type pre-commit --install-hooks
+```
+
+If you prefer this repository-managed hook path, keep:
 ```
 git config core.hooksPath hooks
 ```
 
-You can verify the configuration with:
-```
-git config --get core.hooksPath
-```
-
-To add new pre-commit validations, add an executable `*.sh` file to `hooks/pre-commit.d/`.
+To add new validations, add a new executable script under `hooks/pre-commit.d/` and register it in `.pre-commit-config.yaml`.
 
 Customer repositories
 ---------------------

@@ -1,0 +1,10 @@
+repos:
+  - repo: local
+    hooks:
+      - id: compatible-machine-check
+        name: Ensure COMPATIBLE_MACHINE in .bb files
+        entry: hooks/pre-commit.d/10-compatible-machine.sh
+        language: system
+        pass_filenames: false
+        stages: [pre-commit]
+        files: \.bb$
