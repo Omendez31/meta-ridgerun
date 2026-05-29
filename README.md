@@ -40,11 +40,6 @@ pip install pre-commit
 pre-commit install --hook-type pre-commit --install-hooks
 ```
 
-If you prefer this repository-managed hook path, keep:
-```
-git config core.hooksPath hooks
-```
-
 To add new validations, add a new executable script under `hooks/pre-commit.d/` and register it in `.pre-commit-config.yaml`.
 
 Customer repositories
