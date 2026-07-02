@@ -4,14 +4,15 @@ HOMEPAGE = "https://www.ridgerun.com/post/gstreamer-opencl-accelerated-isp"
 SECTION = "multimedia"
 LICENSE = "Proprietary"
 LIC_FILES_CHKSUM = "file://COPYING;md5=46819161aba98ab8c502e93a15713e58"
-COMPATIBLE_MACHINE = "(imx-nxp-bsp)"
+COMPATIBLE_MACHINE = "(imx-nxp-bsp|.*qcom.*)"
 
 DEPENDS = " \
     gstreamer1.0 \
     gstreamer1.0-plugins-base \
     gstreamer1.0-plugins-bad \
-    imx-gst1.0-plugin \
 "
+
+DEPENDS:append:imx-nxp-bsp = " imx-gst1.0-plugin"
 
 SRCBRANCH ?= "master"
 SRCREV = "${AUTOREV}"
