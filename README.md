@@ -29,6 +29,19 @@ If you maintain `bblayers.conf` manually, append:
 BBLAYERS += "${TOPDIR}/../meta-ridgerun"
 ```
 
+Git Hooks
+---------
+This layer uses the `pre-commit` framework. Current checks:
+- `10-compatible-machine.sh`: verifies each staged `.bb` file defines `COMPATIBLE_MACHINE`.
+
+Install `pre-commit` and enable hooks from the `meta-ridgerun` repository root:
+```
+pip install pre-commit
+pre-commit install --hook-type pre-commit --install-hooks
+```
+
+To add new validations, add a new executable script under `hooks/pre-commit.d/` and register it in `.pre-commit-config.yaml`.
+
 Customer repositories
 ---------------------
 Proprietary plugins in this layer fetch from private RidgeRun GitLab paths under `git@gitlab.ridgerun.com/ridgerun/orders/${RR_CUSTOMER_GITLAB_ORDER_DIR}`. Set the directory you were given in one of these ways (prefer `conf/local.conf`):

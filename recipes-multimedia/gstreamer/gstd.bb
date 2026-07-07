@@ -4,6 +4,7 @@ HOMEPAGE = "https://developer.ridgerun.com/wiki/index.php?title=Gstd-1.0"
 SECTION = "multimedia"
 LICENSE = "LGPL-2.1-or-later"
 LIC_FILES_CHKSUM = "file://COPYING;md5=c71b653a0f608a58cdc5693ae57126bc"
+COMPATIBLE_MACHINE = ".*"
 
 DEPENDS = " \
     gstreamer1.0 \
